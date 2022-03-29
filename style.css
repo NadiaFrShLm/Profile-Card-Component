@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  line-height: 1;
+  color: hsl(229, 23%, 23%);
+  background-color: hsl(185, 75%, 39%);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-position: left -70% top 200%, right -50% top -140%;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card {
+  margin: 18rem auto auto;
+  background-color: #fff;
+  border-radius: 13px;
+  width: 34rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  overflow: hidden;
+}
+.img-box {
+  position: relative;
+  height: 14rem;
+  width: 100%;
+  background-image: url(images/bg-pattern-card.svg);
+}
+.user-img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 11rem;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+.img-border {
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-box {
+  width: 100%;
+  padding: 5.4rem 0 2.4rem;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+  border-bottom: 1.5px solid rgba(150, 150, 150, 0.2);
+  line-height: 1.7;
+}
+.user-name {
+  font-weight: 700;
+}
+.user-age {
+  color: #888;
+}
+.user-city {
+  color: #888;
+  font-size: 1.3rem;
+}
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  padding: 1.6rem 0 2rem;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.num {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.label {
+  color: #888;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+}
+
+/* ********** */
+.attribution {
+  font-size: 11px;
+  margin: auto auto 1.2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/************************************/
+/* BELOW 375px  (Phones) */
+/************************************/
+
+/* 375/16px = 23.5 */
+@media (max-width: 23.5em) {
+  body {
+    background-position: left 120% top 150%, right 120% top -70%;
+  }
+  .card {
+    margin-top: 14rem;
+    width: 85%;
+  }
+
+  .user-box {
+    padding-bottom: 1.8rem;
+  }
+  .statistics {
+    padding: 1.4srem 0 2rem;
+  }
+}
